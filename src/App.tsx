@@ -11,6 +11,9 @@ import MoreMenu from './components/MoreMenu/MoreMenu';
 import AddMoneyModal from './components/Modals/AddMoneyModal';
 import ATMCardModal from './components/Modals/ATMCardModal';
 import ReceiptModal from './components/Modals/ReceiptModal';
+import SportyModal from './components/Modals/SportyModal';
+import WithdrawModal from './components/Modals/WithdrawModal';
+import TransferModal from './components/Modals/TransferModal';
 import './index.css';
 
 function App() {
@@ -18,9 +21,24 @@ function App() {
   const [showHistory, setShowHistory] = useState(false);
   const [activeModal, setActiveModal] = useState<string | null>(null);
   const [selectedTx, setSelectedTx] = useState<any>(null);
+  const [balance, setBalance] = useState(1000000);
 
   const handleQuickAction = (action: string) => {
     setActiveModal(action);
+  };
+
+  const handleFeatureClick = (feature: string) => {
+    setActiveModal(feature);
+  };
+
+  const handleWithdraw = (amount: number) => {
+    setBalance(prev => prev - amount);
+  };
+
+  const handleTransfer = (amount: number, bank: string, account: string) => {
+    setBalance(prev => prev - amount);
+    // Could add transaction to history here later
+    console.log(`Transferred ${amount} to ${account} at ${bank}`);
   };
 
   const handleTransactionClick = (tx: any) => {
@@ -41,12 +59,12 @@ function App() {
       <main style={{ paddingTop: '5rem' }}>
         {activeTab === 'home' && (
           <>
-            <BalanceCard />
+            <BalanceCard balance={balance} />
             {!showHistory ? (
               <>
                 <QuickActions onAction={handleQuickAction} />
                 <TransactionHistory onToggle={() => setShowHistory(true)} />
-                <FeatureGrid />
+                <FeatureGrid onFeatureClick={handleFeatureClick} />
               </>
             ) : (
               <TransactionList
@@ -59,6 +77,9 @@ function App() {
             {/* Modals */}
             <AddMoneyModal isOpen={activeModal === 'add_money'} onClose={closeModal} />
             <ATMCardModal isOpen={activeModal === 'atm_card'} onClose={closeModal} />
+            <SportyModal isOpen={activeModal === 'sporty'} onClose={closeModal} />
+            <WithdrawModal isOpen={activeModal === 'withdrawal'} onClose={closeModal} onWithdraw={handleWithdraw} />
+            <TransferModal isOpen={activeModal === 'transfer'} onClose={closeModal} onTransfer={handleTransfer} />
             <ReceiptModal isOpen={activeModal === 'receipt'} onClose={closeModal} transaction={selectedTx} />
           </>
         )}

@@ -10,13 +10,28 @@ const features = [
     { icon: <Lightbulb size={20} />, label: 'Utility & Bills', color: '#FFCC00' },
 ];
 
-const FeatureGrid = () => {
+interface FeatureGridProps {
+    onFeatureClick?: (feature: string) => void;
+}
+
+const FeatureGrid = ({ onFeatureClick }: FeatureGridProps) => {
+    const handleFeatureClick = (label: string) => {
+        if (onFeatureClick) {
+            if (label.includes('Withdrawal')) onFeatureClick('withdrawal');
+            if (label.includes('Transfer')) onFeatureClick('transfer');
+        }
+    };
+
     return (
         <div className="feature-list-container">
             <h3 className="section-title">Features</h3>
             <div className="feature-list">
                 {features.map((feature, index) => (
-                    <button key={index} className="feature-item">
+                    <button
+                        key={index}
+                        className="feature-item"
+                        onClick={() => handleFeatureClick(feature.label)}
+                    >
                         <div className="feature-left">
                             <div className="feature-icon" style={{ backgroundColor: `${feature.color}20`, color: feature.color }}>
                                 {feature.icon}

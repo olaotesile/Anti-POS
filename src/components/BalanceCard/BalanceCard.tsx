@@ -2,7 +2,11 @@ import { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import './BalanceCard.css';
 
-const BalanceCard = () => {
+interface BalanceCardProps {
+    balance: number;
+}
+
+const BalanceCard = ({ balance }: BalanceCardProps) => {
     const [isVisible, setIsVisible] = useState(true);
     const [currency, setCurrency] = useState('UDS');
 
@@ -18,6 +22,10 @@ const BalanceCard = () => {
         return '$'; // Normal USD icon requested
     };
 
+    const formatAmount = (amount: number) => {
+        return amount.toLocaleString();
+    };
+
     return (
         <div className="balance-wrapper">
             <div className="yc-label">Somebody call YC!!!</div>
@@ -30,10 +38,10 @@ const BalanceCard = () => {
                     <div className="amount-section">
                         <h1 className="balance-amount">
                             {isVisible ? (
-                                <>{getSymbol()}{'1,000,000 '}<span className="currency-suffix">{currency === 'UDS' ? 'dullars' : currency}</span></>
+                                <>{getSymbol()} {formatAmount(balance)} <span className="currency-suffix">{currency === 'UDS' ? 'dullars' : currency}</span></>
                             ) : '••••••••'}
                         </h1>
-                        <span className="last-updated">last updated 2min ago</span>
+                        <span className="last-updated">last updated just now</span>
                     </div>
 
                     <div className="currency-control">

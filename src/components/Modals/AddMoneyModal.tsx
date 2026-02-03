@@ -22,7 +22,7 @@ const AddMoneyModal = ({ isOpen, onClose }: AddMoneyModalProps) => {
             <div className="bank-details-container">
                 <div className="bank-info-row">
                     <span className="label">Bank Name</span>
-                    <span className="value">Opay</span>
+                    <span className="value">AntiPOS</span>
                 </div>
                 <div className="bank-info-row">
                     <span className="label">Account Number</span>

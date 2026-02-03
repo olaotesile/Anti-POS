@@ -1,0 +1,107 @@
+.balance-wrapper {
+    margin-bottom: 2rem;
+}
+
+.yc-label {
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.balance-card {
+    background-color: var(--card-bg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../../assets/card-bg.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.balance-header {
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.balance-label {
+    color: var(--accent-green);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.balance-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.amount-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.balance-amount {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+}
+
+.currency-suffix {
+    font-size: 0.5em;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.last-updated {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
+
+.currency-control {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+}
+
+.currency-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.dropdown-arrow {
+    font-size: 0.6em;
+    color: var(--text-secondary);
+}
+
+.toggle-visibility-btn {
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
+@media (min-width: 768px) {
+    .balance-amount {
+        font-size: 2.5rem;
+    }
+}

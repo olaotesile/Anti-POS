@@ -1,0 +1,47 @@
+.footer-section {
+    padding: 2rem 0 8rem;
+    /* Increased to ensure visibility */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.footer-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-link.highlight {
+    color: var(--accent-green);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.footer-link:hover {
+    color: var(--text-primary);
+}
+
+.footer-github {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--card-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+}

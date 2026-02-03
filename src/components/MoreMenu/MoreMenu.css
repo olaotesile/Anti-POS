@@ -1,0 +1,119 @@
+.more-menu-container {
+    padding-bottom: 2rem;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.more-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.user-details-card {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.user-avatar-large {
+    width: 56px;
+    height: 56px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+}
+
+.user-text-info {
+    flex: 1;
+}
+
+.user-fullname {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.account-number {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-family: monospace;
+    /* Monospace for account number feel */
+    letter-spacing: 0.5px;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: transparent;
+    /* Clean list look */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    /* Separator */
+    width: 100%;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item:active {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.menu-item-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-icon-wrapper {
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+}
+
+.menu-label {
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.icon-gold {
+    color: #FFD700;
+}
+
+.text-danger {
+    color: var(--danger);
+}
+
+.menu-chevron {
+    color: var(--text-secondary);
+    opacity: 0.5;
+}

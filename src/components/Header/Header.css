@@ -1,0 +1,103 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    /* Add padding for full width */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.avatar-placeholder {
+    width: 32px;
+    height: 32px;
+    background-color: #333;
+    /* Placeholder gray */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+}
+
+.user-name {
+    color: var(--text-primary);
+}
+
+.chevron {
+    color: var(--text-secondary);
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon-btn {
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    /* Added touch target size */
+    background-color: var(--card-bg);
+    /* Slight background for better clickability */
+    border-radius: 50%;
+}
+
+/* Moved desktop-only to end for specificity */
+
+/* Search Bar Styles */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    flex: 1;
+    margin: 0 2rem;
+    max-width: 400px;
+}
+
+.search-icon-input {
+    color: var(--text-secondary);
+    margin-right: 0.5rem;
+}
+
+.search-input {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+}
+
+.desktop-only {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+
+    .desktop-only {
+        display: flex;
+    }
+}

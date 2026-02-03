@@ -1,0 +1,46 @@
+.transaction-history-container {
+    margin-bottom: 2rem;
+}
+
+.view-history-btn {
+    width: 100%;
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.receipt-stack {
+    margin-left: auto;
+    position: relative;
+    width: 40px;
+    height: 24px;
+}
+
+.receipt-mock {
+    position: absolute;
+    width: 20px;
+    height: 24px;
+    background-color: var(--accent-green);
+    opacity: 0.2;
+    border-radius: 4px;
+    right: 0;
+    top: 0;
+    transform: rotate(5deg);
+}
+
+.receipt-mock:nth-child(2) {
+    right: 6px;
+    transform: rotate(-5deg);
+    opacity: 0.4;
+}
+
+.view-history-btn:active {
+    background-color: rgba(255, 255, 255, 0.1);
+}

@@ -1,5 +1,7 @@
 .balance-wrapper {
     margin-bottom: 2rem;
+    padding-top: 3rem;
+    /* Increased to 3rem as requested */
 }
 
 .yc-label {

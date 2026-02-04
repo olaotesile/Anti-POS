@@ -1,0 +1,27 @@
+.app-shell {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    overflow: hidden;
+}
+
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 80px;
+    /* Space for bottom nav */
+    display: flex;
+    flex-direction: column;
+    /* Hide Scrollbar */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+.main-content::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari/Webkit */
+}

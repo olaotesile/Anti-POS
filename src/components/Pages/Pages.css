@@ -6,10 +6,18 @@
     flex-direction: column;
     padding: 1rem 0.25rem;
     /* Minimal side padding maximizes width */
-    padding-top: 1rem;
+    padding-top: 3rem;
+    /* Increased to 3rem for header space */
     /* Safe area for potential top bar */
     overflow-y: auto;
     animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Hide Scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.page-container::-webkit-scrollbar {
+    display: none;
 }
 
 /* ... existing styles ... */
@@ -309,11 +317,12 @@
 }
 
 .green-pill-btn {
-    background-color: #000000;
-    /* App Background */
-    color: var(--accent-green);
-    border: 1px solid var(--accent-green);
-    /* Green border for visibility */
+    background-color: var(--accent-green);
+    /* Green inside as requested */
+    color: #000000;
+    /* Black text for contrast */
+    border: none;
+    /* Remove border for solid fill */
     border-radius: 50px;
     padding: 0.8rem;
     /* Reduced padding */

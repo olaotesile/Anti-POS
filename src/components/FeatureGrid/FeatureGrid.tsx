@@ -19,6 +19,8 @@ const FeatureGrid = ({ onFeatureClick }: FeatureGridProps) => {
         if (onFeatureClick) {
             if (label.includes('Withdrawal')) onFeatureClick('withdrawal');
             if (label.includes('Transfer')) onFeatureClick('transfer');
+            if (label.includes('Balance')) onFeatureClick('balance');
+            if (label.includes('NELFund')) onFeatureClick('nelfund');
         }
     };
 

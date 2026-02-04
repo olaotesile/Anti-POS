@@ -28,7 +28,7 @@ const BalanceCard = ({ balance }: BalanceCardProps) => {
 
     return (
         <div className="balance-wrapper">
-            <div className="yc-label">Somebody call YC!!!</div>
+            <div className="yc-label">Somebody call YCombinator and A16z!!!</div>
             <div className="balance-card">
                 <div className="balance-header">
                     <span className="balance-label">Balance</span>

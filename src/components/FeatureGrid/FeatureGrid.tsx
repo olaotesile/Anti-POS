@@ -2,7 +2,7 @@ import { ArrowUpRight, ArrowDownLeft, Search, GraduationCap, Banknote, Lightbulb
 import './FeatureGrid.css';
 
 const features = [
-    { icon: <ArrowUpRight size={20} />, label: 'Withdrawal (Cash-Out)', color: '#FF3B30' },
+    { icon: <ArrowUpRight size={20} />, label: 'POS Withdrawal (Cash-Out)', color: '#FF3B30' },
     { icon: <ArrowDownLeft size={20} />, label: 'Transfer', color: '#00C853' },
     { icon: <Search size={20} />, label: 'Balance Enquiry', color: '#2979FF' },
     { icon: <GraduationCap size={20} />, label: 'NELFund (Student bread)', color: '#FF9500' },
@@ -21,6 +21,8 @@ const FeatureGrid = ({ onFeatureClick }: FeatureGridProps) => {
             if (label.includes('Transfer')) onFeatureClick('transfer');
             if (label.includes('Balance')) onFeatureClick('balance');
             if (label.includes('NELFund')) onFeatureClick('nelfund');
+            if (label.includes('LAPO')) onFeatureClick('lapo');
+            if (label.includes('Utility')) onFeatureClick('utility');
         }
     };
 

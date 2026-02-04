@@ -1,14 +1,19 @@
 import { User, Bell, Search, ChevronRight } from 'lucide-react';
 import './Header.css';
 
-const Header = () => {
+interface HeaderProps {
+    userName?: string;
+    onProfileClick?: () => void;
+}
+
+const Header = ({ userName = 'User', onProfileClick }: HeaderProps) => {
     return (
         <header className="header">
-            <div className="user-info">
+            <div className="user-info" onClick={onProfileClick} style={{ cursor: 'pointer' }}>
                 <div className="avatar-placeholder">
                     <User size={20} />
                 </div>
-                <span className="user-name">User</span>
+                <span className="user-name">{userName}</span>
                 <ChevronRight size={16} className="chevron" />
             </div>
 
